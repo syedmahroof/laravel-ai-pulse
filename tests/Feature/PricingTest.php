@@ -1,0 +1,101 @@
+<?php
+
+use Syedmahroof\AiPulse\Http\Livewire\PricingMatrix;
+use Syedmahroof\AiPulse\Models\PricingRule;
+use Syedmahroof\AiPulse\Services\CostCalculator;
+use Livewire\Livewire;
+
+test('PricingRule model can be created and read', function () {
+    $rule = PricingRule::create([
+        'model' => 'gpt-4o',
+        'provider' => 'openai',
+        'input_cost_per_1m' => '2.50',
+        'output_cost_per_1m' => '10.00',
+        'currency' => 'USD',
+    ]);
+
+    $found = PricingRule::find($rule->id);
+
+    expect($found->model)->toBe('gpt-4o');
+    expect((float) $found->input_cost_per_1m)->toBe(2.50);
+});
+
+test('CostCalculator calculates cost correctly', function () {
+    PricingRule::create([
+        'model' => 'gpt-4o',
+        'input_cost_per_1m' => '2.50',
+        'output_cost_per_1m' => '10.00',
+        'currency' => 'USD',
+    ]);
+
+    $calculator = app(CostCalculator::class);
+
+    $result = $calculator->calculate('gpt-4o', 1_000_000, 1_000_000);
+
+    expect($result['input_cost'])->toBe(2.50);
+    expect($result['output_cost'])->toBe(10.00);
+    expect($result['total'])->toBe(12.50);
+    expect($result['currency'])->toBe('USD');
+    expect($result['priced'])->toBeTrue();
+});
+
+test('CostCalculator prefers provider-specific pricing over model defaults', function () {
+    PricingRule::create([
+        'model' => 'gpt-4o',
+        'provider' => null,
+        'input_cost_per_1m' => '1.00',
+        'output_cost_per_1m' => '1.00',
+        'currency' => 'USD',
+    ]);
+
+    PricingRule::create([
+        'model' => 'gpt-4o',
+        'provider' => 'openai',
+        'input_cost_per_1m' => '2.50',
+        'output_cost_per_1m' => '10.00',
+        'currency' => 'USD',
+    ]);
+
+    $result = app(CostCalculator::class)->calculate('gpt-4o', 1_000_000, 1_000_000, 'openai');
+
+    expect($result['total'])->toBe(12.50)
+        ->and($result['priced'])->toBeTrue();
+});
+
+test('CostCalculator marks missing pricing explicitly', function () {
+    $result = app(CostCalculator::class)->calculate('missing-model', 1_000_000, 1_000_000, 'openai');
+
+    expect($result['total'])->toBe(0.0)
+        ->and($result['priced'])->toBeFalse()
+        ->and($result['missing_pricing'])->toBeTrue();
+});
+
+test('PricingMatrix can create pricing rule via model', function () {
+    PricingRule::create([
+        'model' => 'claude-3-opus',
+        'provider' => 'anthropic',
+        'input_cost_per_1m' => '15.00',
+        'output_cost_per_1m' => '75.00',
+    ]);
+
+    expect(PricingRule::where('model', 'claude-3-opus')->exists())->toBeTrue();
+});
+
+test('PricingMatrix rejects duplicate provider model rules', function () {
+    PricingRule::create([
+        'model' => 'gpt-4o',
+        'provider' => 'openai',
+        'input_cost_per_1m' => '2.50',
+        'output_cost_per_1m' => '10.00',
+        'currency' => 'USD',
+    ]);
+
+    Livewire::test(PricingMatrix::class)
+        ->set('showForm', true)
+        ->set('model', 'gpt-4o')
+        ->set('provider', 'openai')
+        ->set('inputCost', '3.00')
+        ->set('outputCost', '12.00')
+        ->call('save')
+        ->assertHasErrors(['model']);
+});
