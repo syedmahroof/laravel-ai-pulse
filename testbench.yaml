@@ -1,0 +1,16 @@
+providers:
+  - Livewire\LivewireServiceProvider
+  - Syedmahroof\AiPulse\AiPulseServiceProvider
+
+migrations:
+  - database/migrations
+  - vendor/laravel/ai/database/migrations
+
+env:
+  - APP_ENV=local
+  - DB_CONNECTION=sqlite
+  - DB_DATABASE=/private/tmp/claude-501/-Users-syedmahroof-sites-laravel-ai-pulse/c3cb2ae9-b495-4d9f-a3cd-dae0152a610e/scratchpad/pulse.sqlite
+  - CACHE_STORE=array
+
+workbench:
+  start: '/ai-pulse'

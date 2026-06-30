@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,9 +30,9 @@
         })();
     </script>
 </head>
-<body class="bg-gray-100 dark:bg-[#111827] text-gray-900 dark:text-gray-100 min-h-screen font-['Inter',system-ui,sans-serif]">
+<body class="bg-white dark:bg-[#111827] text-gray-900 dark:text-gray-100 min-h-screen font-['Inter',system-ui,sans-serif]">
 
-    <div class="flex min-h-screen p-3 gap-3 dark:bg-gradient-to-br dark:from-[#0b1120] dark:via-[#0c2b29] dark:to-[#0b1120] bg-gradient-to-br from-slate-50 via-teal-50 to-slate-50">
+    <div class="flex min-h-screen p-3 gap-3 dark:bg-gradient-to-br dark:from-[#0b1120] dark:via-[#0c2b29] dark:to-[#0b1120] bg-white">
 
         {{-- Ambient Glow Blobs --}}
         <div class="fixed inset-0 overflow-hidden pointer-events-none">
