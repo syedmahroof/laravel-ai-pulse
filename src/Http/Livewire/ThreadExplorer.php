@@ -2,12 +2,12 @@
 
 namespace Syedmahroof\AiPulse\Http\Livewire;
 
-use Syedmahroof\AiPulse\Models\Bookmark;
-use Syedmahroof\AiPulse\Services\ConversationRepository;
 use Illuminate\Contracts\View\View;
 use Illuminate\Support\Facades\DB;
 use Livewire\Component;
 use Livewire\WithPagination;
+use Syedmahroof\AiPulse\Models\Bookmark;
+use Syedmahroof\AiPulse\Services\ConversationRepository;
 
 class ThreadExplorer extends Component
 {

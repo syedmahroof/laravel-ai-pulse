@@ -2,8 +2,8 @@
 
 namespace Syedmahroof\AiPulse\Services;
 
-use Syedmahroof\AiPulse\Models\PricingRule;
 use Illuminate\Support\Collection;
+use Syedmahroof\AiPulse\Models\PricingRule;
 
 class CostCalculator
 {

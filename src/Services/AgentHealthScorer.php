@@ -2,9 +2,9 @@
 
 namespace Syedmahroof\AiPulse\Services;
 
+use Illuminate\Support\Collection;
 use Syedmahroof\AiPulse\Services\Concerns\UsesAiConnection;
 use Syedmahroof\AiPulse\Services\Concerns\UsesJsonQueries;
-use Illuminate\Support\Collection;
 
 class AgentHealthScorer
 {

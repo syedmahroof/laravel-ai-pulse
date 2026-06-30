@@ -1,7 +1,7 @@
 <?php
 
-use Syedmahroof\AiPulse\Support\PulseConfig;
 use Illuminate\Support\Facades\Config;
+use Syedmahroof\AiPulse\Support\PulseConfig;
 
 it('returns configured path', function () {
     expect(PulseConfig::path())->toBe('ai-pulse');

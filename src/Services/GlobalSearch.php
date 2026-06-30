@@ -2,8 +2,8 @@
 
 namespace Syedmahroof\AiPulse\Services;
 
-use Syedmahroof\AiPulse\Services\Concerns\UsesAiConnection;
 use Illuminate\Pagination\LengthAwarePaginator;
+use Syedmahroof\AiPulse\Services\Concerns\UsesAiConnection;
 
 class GlobalSearch
 {

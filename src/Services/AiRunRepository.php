@@ -2,9 +2,9 @@
 
 namespace Syedmahroof\AiPulse\Services;
 
-use Syedmahroof\AiPulse\Models\AiRun;
 use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\Support\Collection;
+use Syedmahroof\AiPulse\Models\AiRun;
 
 class AiRunRepository
 {

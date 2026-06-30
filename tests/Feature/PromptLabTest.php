@@ -1,10 +1,10 @@
 <?php
 
+use Livewire\Livewire;
 use Syedmahroof\AiPulse\Agent\PulsePromptLabAgent;
 use Syedmahroof\AiPulse\Http\Livewire\PromptLab;
 use Syedmahroof\AiPulse\Models\PromptLabSession;
 use Syedmahroof\AiPulse\Services\PromptLabService;
-use Livewire\Livewire;
 
 beforeEach(function () {
     config()->set('ai.providers', [

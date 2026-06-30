@@ -2,9 +2,9 @@
 
 namespace Syedmahroof\AiPulse\Http\Livewire;
 
-use Syedmahroof\AiPulse\Services\ProviderHealthChecker;
 use Illuminate\Contracts\View\View;
 use Livewire\Component;
+use Syedmahroof\AiPulse\Services\ProviderHealthChecker;
 
 class ProviderHealth extends Component
 {

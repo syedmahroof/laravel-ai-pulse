@@ -1,10 +1,5 @@
 <?php
 
-use Syedmahroof\AiPulse\Models\AiRun;
-use Syedmahroof\AiPulse\Models\BudgetAlert;
-use Syedmahroof\AiPulse\Models\PricingRule;
-use Syedmahroof\AiPulse\Notifications\BudgetExceeded;
-use Syedmahroof\AiPulse\Services\TokenAggregator;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Notification;
 use Laravel\Ai\AnonymousAgent;
@@ -18,6 +13,11 @@ use Laravel\Ai\Providers\OpenAiProvider;
 use Laravel\Ai\Responses\AgentResponse;
 use Laravel\Ai\Responses\Data\Meta;
 use Laravel\Ai\Responses\Data\Usage;
+use Syedmahroof\AiPulse\Models\AiRun;
+use Syedmahroof\AiPulse\Models\BudgetAlert;
+use Syedmahroof\AiPulse\Models\PricingRule;
+use Syedmahroof\AiPulse\Notifications\BudgetExceeded;
+use Syedmahroof\AiPulse\Services\TokenAggregator;
 
 it('records one-off agent prompts when observability is enabled', function () {
     [$prompt, $response] = makeRunFixtures(invocationId: '018f0000-0000-7000-8000-000000000001');

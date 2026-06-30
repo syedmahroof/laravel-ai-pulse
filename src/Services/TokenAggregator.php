@@ -2,15 +2,15 @@
 
 namespace Syedmahroof\AiPulse\Services;
 
-use Syedmahroof\AiPulse\Models\AiRun;
-use Syedmahroof\AiPulse\Services\Concerns\UsesAiConnection;
-use Syedmahroof\AiPulse\Services\Concerns\UsesJsonQueries;
 use Carbon\CarbonInterface;
 use Illuminate\Database\Eloquent\Builder as EloquentBuilder;
 use Illuminate\Database\Query\Builder;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Schema;
+use Syedmahroof\AiPulse\Models\AiRun;
+use Syedmahroof\AiPulse\Services\Concerns\UsesAiConnection;
+use Syedmahroof\AiPulse\Services\Concerns\UsesJsonQueries;
 
 class TokenAggregator
 {

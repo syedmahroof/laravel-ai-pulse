@@ -2,11 +2,11 @@
 
 namespace Syedmahroof\AiPulse\Http\Livewire;
 
-use Syedmahroof\AiPulse\Contracts\AgentRegistryContract;
-use Syedmahroof\AiPulse\Services\AgentHealthScorer;
 use Illuminate\Contracts\View\View;
 use Livewire\Attributes\On;
 use Livewire\Component;
+use Syedmahroof\AiPulse\Contracts\AgentRegistryContract;
+use Syedmahroof\AiPulse\Services\AgentHealthScorer;
 
 class AgentInspector extends Component
 {

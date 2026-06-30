@@ -1,8 +1,8 @@
 <?php
 
+use Livewire\Livewire;
 use Syedmahroof\AiPulse\Http\Livewire\MessageTimeline;
 use Syedmahroof\AiPulse\Services\ConversationRepository;
-use Livewire\Livewire;
 
 beforeEach(function () {
     $this->mockConversation = (object) [

@@ -1,8 +1,8 @@
 <?php
 
+use Illuminate\Validation\ValidationException;
 use Syedmahroof\AiPulse\Http\Livewire\PromptLibrary;
 use Syedmahroof\AiPulse\Models\SavedPrompt;
-use Illuminate\Validation\ValidationException;
 
 test('SavedPrompt model can be created', function () {
     $prompt = SavedPrompt::create([

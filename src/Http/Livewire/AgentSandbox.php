@@ -2,15 +2,15 @@
 
 namespace Syedmahroof\AiPulse\Http\Livewire;
 
-use Syedmahroof\AiPulse\Contracts\AgentRegistryContract;
-use Syedmahroof\AiPulse\Services\AgentIntrospector;
-use Syedmahroof\AiPulse\Services\SandboxRunner;
 use Illuminate\Contracts\View\View;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\DB;
 use Livewire\Attributes\On;
 use Livewire\Component;
+use Syedmahroof\AiPulse\Contracts\AgentRegistryContract;
+use Syedmahroof\AiPulse\Services\AgentIntrospector;
+use Syedmahroof\AiPulse\Services\SandboxRunner;
 
 class AgentSandbox extends Component
 {

@@ -2,9 +2,9 @@
 
 namespace Syedmahroof\AiPulse\Services;
 
-use Syedmahroof\AiPulse\Support\SandboxResult;
 use Illuminate\Support\Facades\App;
 use Laravel\Ai\Contracts\Agent;
+use Syedmahroof\AiPulse\Support\SandboxResult;
 
 class SandboxRunner
 {

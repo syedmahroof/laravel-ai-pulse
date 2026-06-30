@@ -2,10 +2,10 @@
 
 namespace Syedmahroof\AiPulse\Http\Livewire;
 
-use Syedmahroof\AiPulse\Models\SavedPrompt;
 use Illuminate\Contracts\View\View;
 use Livewire\Component;
 use Livewire\WithPagination;
+use Syedmahroof\AiPulse\Models\SavedPrompt;
 
 class PromptLibrary extends Component
 {

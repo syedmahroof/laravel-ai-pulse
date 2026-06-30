@@ -1,9 +1,9 @@
 <?php
 
+use Livewire\Livewire;
 use Syedmahroof\AiPulse\Http\Livewire\PricingMatrix;
 use Syedmahroof\AiPulse\Models\PricingRule;
 use Syedmahroof\AiPulse\Services\CostCalculator;
-use Livewire\Livewire;
 
 test('PricingRule model can be created and read', function () {
     $rule = PricingRule::create([

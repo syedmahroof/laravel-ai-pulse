@@ -2,8 +2,6 @@
 
 namespace Syedmahroof\AiPulse\Services;
 
-use Syedmahroof\AiPulse\Contracts\AgentRegistryContract;
-use Syedmahroof\AiPulse\Support\PulseConfig;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Cache;
 use Laravel\Ai\Attributes\Temperature;
@@ -14,6 +12,8 @@ use Laravel\Ai\Contracts\Tool;
 use Laravel\Ai\Tools\ToolNameResolver;
 use RecursiveDirectoryIterator;
 use RecursiveIteratorIterator;
+use Syedmahroof\AiPulse\Contracts\AgentRegistryContract;
+use Syedmahroof\AiPulse\Support\PulseConfig;
 
 class AgentRegistry implements AgentRegistryContract
 {

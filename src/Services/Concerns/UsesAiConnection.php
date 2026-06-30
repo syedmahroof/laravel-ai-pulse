@@ -43,6 +43,20 @@ trait UsesAiConnection
     }
 
     /**
+     * Get a prefixed table name.
+     */
+    protected function prefixTable(string $table): string
+    {
+        $connection = $this->connection();
+
+        if (method_exists($connection, 'getTablePrefix')) {
+            return $connection->getTablePrefix().$table;
+        }
+
+        return $table;
+    }
+
+    /**
      * Log a warning once per request when a required table is missing.
      */
     private function logMissingTable(string $table): void

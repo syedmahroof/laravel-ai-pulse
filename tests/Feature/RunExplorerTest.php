@@ -1,8 +1,8 @@
 <?php
 
+use Livewire\Livewire;
 use Syedmahroof\AiPulse\Http\Livewire\RunExplorer;
 use Syedmahroof\AiPulse\Models\AiRun;
-use Livewire\Livewire;
 
 beforeEach(function () {
     AiRun::query()->delete();

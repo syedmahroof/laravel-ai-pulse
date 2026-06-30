@@ -2,13 +2,13 @@
 
 namespace Syedmahroof\AiPulse\Http\Livewire;
 
-use Syedmahroof\AiPulse\Models\AiRun;
-use Syedmahroof\AiPulse\Services\AgentRegistry;
-use Syedmahroof\AiPulse\Services\AiRunRepository;
 use Illuminate\Contracts\View\View;
 use Laravel\Ai\Enums\Lab;
 use Livewire\Component;
 use Livewire\WithPagination;
+use Syedmahroof\AiPulse\Models\AiRun;
+use Syedmahroof\AiPulse\Services\AgentRegistry;
+use Syedmahroof\AiPulse\Services\AiRunRepository;
 
 class RunExplorer extends Component
 {

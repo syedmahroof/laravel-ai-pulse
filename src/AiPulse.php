@@ -2,8 +2,8 @@
 
 namespace Syedmahroof\AiPulse;
 
-use Syedmahroof\AiPulse\Support\PulseConfig;
 use Illuminate\Support\Facades\Schema;
+use Syedmahroof\AiPulse\Support\PulseConfig;
 
 class AiPulse
 {

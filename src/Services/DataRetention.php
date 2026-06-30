@@ -2,8 +2,8 @@
 
 namespace Syedmahroof\AiPulse\Services;
 
-use Syedmahroof\AiPulse\Services\Concerns\UsesAiConnection;
 use Illuminate\Support\Collection;
+use Syedmahroof\AiPulse\Services\Concerns\UsesAiConnection;
 
 class DataRetention
 {

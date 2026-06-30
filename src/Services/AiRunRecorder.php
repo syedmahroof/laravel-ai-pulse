@@ -2,7 +2,6 @@
 
 namespace Syedmahroof\AiPulse\Services;
 
-use Syedmahroof\AiPulse\Models\AiRun;
 use Carbon\CarbonInterface;
 use Illuminate\Contracts\Support\Arrayable;
 use Illuminate\Support\Facades\Schema;
@@ -13,6 +12,7 @@ use Laravel\Ai\Events\AgentStreamed;
 use Laravel\Ai\Events\InvokingTool;
 use Laravel\Ai\Events\ProviderFailedOver;
 use Laravel\Ai\Events\ToolInvoked;
+use Syedmahroof\AiPulse\Models\AiRun;
 use Throwable;
 
 class AiRunRecorder

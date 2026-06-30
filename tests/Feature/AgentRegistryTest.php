@@ -1,7 +1,7 @@
 <?php
 
-use Syedmahroof\AiPulse\Services\AgentRegistry;
 use Illuminate\Support\Collection;
+use Syedmahroof\AiPulse\Services\AgentRegistry;
 
 it('returns empty collection when no agents exist', function () {
     $registry = app(AgentRegistry::class);

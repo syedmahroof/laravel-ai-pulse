@@ -2,25 +2,6 @@
 
 namespace Syedmahroof\AiPulse;
 
-use Syedmahroof\AiPulse\Console\InstallCommand;
-use Syedmahroof\AiPulse\Contracts\AgentRegistryContract;
-use Syedmahroof\AiPulse\Http\Livewire\AgentInspector;
-use Syedmahroof\AiPulse\Http\Livewire\AgentSandbox;
-use Syedmahroof\AiPulse\Http\Livewire\AuditDashboard;
-use Syedmahroof\AiPulse\Http\Livewire\BudgetAlerts;
-use Syedmahroof\AiPulse\Http\Livewire\CostDashboard;
-use Syedmahroof\AiPulse\Http\Livewire\MessageTimeline;
-use Syedmahroof\AiPulse\Http\Livewire\PricingMatrix;
-use Syedmahroof\AiPulse\Http\Livewire\PromptLab;
-use Syedmahroof\AiPulse\Http\Livewire\PromptLibrary;
-use Syedmahroof\AiPulse\Http\Livewire\ProviderHealth;
-use Syedmahroof\AiPulse\Http\Livewire\RunExplorer;
-use Syedmahroof\AiPulse\Http\Livewire\ThreadExplorer;
-use Syedmahroof\AiPulse\Http\Livewire\TodayStats;
-use Syedmahroof\AiPulse\Http\Middleware\Authorize;
-use Syedmahroof\AiPulse\Services\AgentRegistry;
-use Syedmahroof\AiPulse\Services\AiRunRecorder;
-use Syedmahroof\AiPulse\Services\BudgetMonitor;
 use Illuminate\Contracts\Events\Dispatcher;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Route;
@@ -54,6 +35,25 @@ use Laravel\Ai\Events\StreamingAgent;
 use Laravel\Ai\Events\ToolInvoked;
 use Laravel\Ai\Events\TranscriptionGenerated;
 use Livewire\Livewire;
+use Syedmahroof\AiPulse\Console\InstallCommand;
+use Syedmahroof\AiPulse\Contracts\AgentRegistryContract;
+use Syedmahroof\AiPulse\Http\Livewire\AgentInspector;
+use Syedmahroof\AiPulse\Http\Livewire\AgentSandbox;
+use Syedmahroof\AiPulse\Http\Livewire\AuditDashboard;
+use Syedmahroof\AiPulse\Http\Livewire\BudgetAlerts;
+use Syedmahroof\AiPulse\Http\Livewire\CostDashboard;
+use Syedmahroof\AiPulse\Http\Livewire\MessageTimeline;
+use Syedmahroof\AiPulse\Http\Livewire\PricingMatrix;
+use Syedmahroof\AiPulse\Http\Livewire\PromptLab;
+use Syedmahroof\AiPulse\Http\Livewire\PromptLibrary;
+use Syedmahroof\AiPulse\Http\Livewire\ProviderHealth;
+use Syedmahroof\AiPulse\Http\Livewire\RunExplorer;
+use Syedmahroof\AiPulse\Http\Livewire\ThreadExplorer;
+use Syedmahroof\AiPulse\Http\Livewire\TodayStats;
+use Syedmahroof\AiPulse\Http\Middleware\Authorize;
+use Syedmahroof\AiPulse\Services\AgentRegistry;
+use Syedmahroof\AiPulse\Services\AiRunRecorder;
+use Syedmahroof\AiPulse\Services\BudgetMonitor;
 
 class AiPulseServiceProvider extends ServiceProvider
 {

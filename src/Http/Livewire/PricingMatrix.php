@@ -2,10 +2,10 @@
 
 namespace Syedmahroof\AiPulse\Http\Livewire;
 
-use Syedmahroof\AiPulse\Models\PricingRule;
 use Illuminate\Contracts\View\View;
 use Illuminate\Validation\Rule;
 use Livewire\Component;
+use Syedmahroof\AiPulse\Models\PricingRule;
 
 class PricingMatrix extends Component
 {

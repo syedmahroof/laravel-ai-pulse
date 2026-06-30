@@ -1,12 +1,12 @@
 <?php
 
+use Illuminate\Database\QueryException;
+use Illuminate\Support\Facades\Notification;
+use Livewire\Livewire;
 use Syedmahroof\AiPulse\Http\Livewire\BudgetAlerts;
 use Syedmahroof\AiPulse\Models\Bookmark;
 use Syedmahroof\AiPulse\Models\BudgetAlert;
 use Syedmahroof\AiPulse\Notifications\BudgetExceeded;
-use Illuminate\Database\QueryException;
-use Illuminate\Support\Facades\Notification;
-use Livewire\Livewire;
 
 test('Bookmark model can be created and deleted', function () {
     $bookmark = Bookmark::create([

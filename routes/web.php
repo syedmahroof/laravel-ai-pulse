@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
 use Syedmahroof\AiPulse\Http\Controllers\AuditController;
 use Syedmahroof\AiPulse\Http\Controllers\ConversationController;
 use Syedmahroof\AiPulse\Http\Controllers\DashboardController;
@@ -10,7 +11,6 @@ use Syedmahroof\AiPulse\Http\Controllers\PromptLabController;
 use Syedmahroof\AiPulse\Http\Controllers\RunController;
 use Syedmahroof\AiPulse\Http\Controllers\TraceController;
 use Syedmahroof\AiPulse\Http\Controllers\UsageController;
-use Illuminate\Support\Facades\Route;
 
 Route::get('/', [DashboardController::class, 'index'])->name('pulse.dashboard');
 Route::get('/conversations', [ConversationController::class, 'index'])->name('pulse.conversations.index');

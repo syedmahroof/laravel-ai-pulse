@@ -1,7 +1,7 @@
 <?php
 
-use Syedmahroof\AiPulse\Services\TokenAggregator;
 use Illuminate\Support\Collection;
+use Syedmahroof\AiPulse\Services\TokenAggregator;
 
 it('returns zero stats when no data exists', function () {
     $aggregator = app(TokenAggregator::class);

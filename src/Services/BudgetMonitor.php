@@ -2,15 +2,15 @@
 
 namespace Syedmahroof\AiPulse\Services;
 
+use Carbon\CarbonInterface;
+use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Support\Facades\Notification;
+use Illuminate\Support\Facades\Schema;
 use Syedmahroof\AiPulse\Models\AiRun;
 use Syedmahroof\AiPulse\Models\BudgetAlert;
 use Syedmahroof\AiPulse\Notifications\BudgetExceeded;
 use Syedmahroof\AiPulse\Services\Concerns\UsesAiConnection;
 use Syedmahroof\AiPulse\Services\Concerns\UsesJsonQueries;
-use Carbon\CarbonInterface;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Support\Facades\Notification;
-use Illuminate\Support\Facades\Schema;
 
 class BudgetMonitor
 {

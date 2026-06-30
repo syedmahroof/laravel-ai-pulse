@@ -1,7 +1,7 @@
 <?php
 
-use Syedmahroof\AiPulse\Services\ConversationRepository;
 use Illuminate\Pagination\LengthAwarePaginator;
+use Syedmahroof\AiPulse\Services\ConversationRepository;
 
 it('can list conversations with pagination', function () {
     $repository = app(ConversationRepository::class);

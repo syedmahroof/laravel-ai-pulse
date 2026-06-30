@@ -2,9 +2,9 @@
 
 namespace Syedmahroof\AiPulse\Http\Controllers;
 
-use Syedmahroof\AiPulse\Models\PromptLabSession;
 use Illuminate\Contracts\View\View;
 use Illuminate\Routing\Controller;
+use Syedmahroof\AiPulse\Models\PromptLabSession;
 
 class PromptLabController extends Controller
 {

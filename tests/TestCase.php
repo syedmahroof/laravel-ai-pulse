@@ -2,11 +2,11 @@
 
 namespace Syedmahroof\AiPulse\Tests;
 
-use Syedmahroof\AiPulse\AiPulseServiceProvider;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Schema;
 use Livewire\LivewireServiceProvider;
 use Orchestra\Testbench\TestCase as OrchestraTestCase;
+use Syedmahroof\AiPulse\AiPulseServiceProvider;
 
 abstract class TestCase extends OrchestraTestCase
 {

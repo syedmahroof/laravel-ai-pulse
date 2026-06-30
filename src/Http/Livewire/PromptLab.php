@@ -2,12 +2,12 @@
 
 namespace Syedmahroof\AiPulse\Http\Livewire;
 
-use Syedmahroof\AiPulse\Models\SavedPrompt;
-use Syedmahroof\AiPulse\Services\PromptLabService;
 use Illuminate\Contracts\View\View;
 use Illuminate\Support\Collection;
 use Livewire\Attributes\On;
 use Livewire\Component;
+use Syedmahroof\AiPulse\Models\SavedPrompt;
+use Syedmahroof\AiPulse\Services\PromptLabService;
 
 class PromptLab extends Component
 {

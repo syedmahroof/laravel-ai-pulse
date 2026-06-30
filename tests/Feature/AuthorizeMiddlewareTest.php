@@ -1,8 +1,8 @@
 <?php
 
-use Syedmahroof\AiPulse\Http\Middleware\Authorize;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Gate;
+use Syedmahroof\AiPulse\Http\Middleware\Authorize;
 use Symfony\Component\HttpKernel\Exception\HttpException;
 
 beforeEach(function () {

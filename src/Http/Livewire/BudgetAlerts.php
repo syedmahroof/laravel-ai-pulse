@@ -2,12 +2,12 @@
 
 namespace Syedmahroof\AiPulse\Http\Livewire;
 
-use Syedmahroof\AiPulse\Models\BudgetAlert;
-use Syedmahroof\AiPulse\Notifications\BudgetExceeded;
-use Syedmahroof\AiPulse\Services\BudgetMonitor;
 use Illuminate\Contracts\View\View;
 use Illuminate\Support\Facades\Notification;
 use Livewire\Component;
+use Syedmahroof\AiPulse\Models\BudgetAlert;
+use Syedmahroof\AiPulse\Notifications\BudgetExceeded;
+use Syedmahroof\AiPulse\Services\BudgetMonitor;
 
 class BudgetAlerts extends Component
 {

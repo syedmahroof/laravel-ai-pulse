@@ -2,10 +2,10 @@
 
 namespace Syedmahroof\AiPulse\Services;
 
-use Syedmahroof\AiPulse\Agent\PulsePromptLabAgent;
-use Syedmahroof\AiPulse\Models\PromptLabSession;
 use Illuminate\Support\Facades\Log;
 use Laravel\Ai\Ai;
+use Syedmahroof\AiPulse\Agent\PulsePromptLabAgent;
+use Syedmahroof\AiPulse\Models\PromptLabSession;
 
 class PromptLabService
 {

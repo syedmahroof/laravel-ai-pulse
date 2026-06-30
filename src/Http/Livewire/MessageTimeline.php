@@ -2,11 +2,11 @@
 
 namespace Syedmahroof\AiPulse\Http\Livewire;
 
+use Illuminate\Contracts\View\View;
+use Livewire\Component;
 use Syedmahroof\AiPulse\Models\Bookmark;
 use Syedmahroof\AiPulse\Services\AiRunRepository;
 use Syedmahroof\AiPulse\Services\ConversationRepository;
-use Illuminate\Contracts\View\View;
-use Livewire\Component;
 
 class MessageTimeline extends Component
 {

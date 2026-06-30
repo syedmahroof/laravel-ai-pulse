@@ -2,9 +2,9 @@
 
 namespace Syedmahroof\AiPulse\Http\Controllers;
 
-use Syedmahroof\AiPulse\Contracts\AgentRegistryContract;
 use Illuminate\Contracts\View\View;
 use Illuminate\Routing\Controller;
+use Syedmahroof\AiPulse\Contracts\AgentRegistryContract;
 
 class PlaygroundController extends Controller
 {

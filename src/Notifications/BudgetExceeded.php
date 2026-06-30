@@ -2,11 +2,11 @@
 
 namespace Syedmahroof\AiPulse\Notifications;
 
-use Syedmahroof\AiPulse\Models\BudgetAlert;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
+use Syedmahroof\AiPulse\Models\BudgetAlert;
 
 class BudgetExceeded extends Notification implements ShouldQueue
 {

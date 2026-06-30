@@ -2,9 +2,9 @@
 
 namespace Syedmahroof\AiPulse\Http\Controllers;
 
-use Syedmahroof\AiPulse\Services\AiRunRepository;
 use Illuminate\Contracts\View\View;
 use Illuminate\Routing\Controller;
+use Syedmahroof\AiPulse\Services\AiRunRepository;
 
 class RunController extends Controller
 {

@@ -2,11 +2,11 @@
 
 namespace Syedmahroof\AiPulse\Http\Middleware;
 
-use Syedmahroof\AiPulse\Support\PulseConfig;
 use Closure;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Gate;
+use Syedmahroof\AiPulse\Support\PulseConfig;
 
 class Authorize
 {

@@ -2,10 +2,10 @@
 
 namespace Syedmahroof\AiPulse\Services;
 
-use Syedmahroof\AiPulse\Services\Concerns\UsesAiConnection;
-use Syedmahroof\AiPulse\Services\Concerns\UsesJsonQueries;
 use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\Support\Collection;
+use Syedmahroof\AiPulse\Services\Concerns\UsesAiConnection;
+use Syedmahroof\AiPulse\Services\Concerns\UsesJsonQueries;
 
 class ConversationRepository
 {
@@ -35,11 +35,13 @@ class ConversationRepository
             ->where('agent_conversations.user_id', '>=', 0);
 
         if ($this->hasTable('agent_conversation_messages')) {
-            $query->selectRaw('COUNT(agent_conversation_messages.id) as message_count');
+            $messagesTable = $this->prefixTable('agent_conversation_messages');
+
+            $query->selectRaw("COUNT({$messagesTable}.id) as message_count");
 
             if ($this->hasColumn('agent_conversation_messages', 'agent')) {
                 $query->addSelect(
-                    $this->connection()->raw('MAX(agent_conversation_messages.agent) as agent_class')
+                    $this->connection()->raw("MAX({$messagesTable}.agent) as agent_class")
                 );
             }
 
